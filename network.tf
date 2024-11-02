@@ -15,7 +15,7 @@ resource "azurerm_subnet" "demo-internal-1" {
 resource "azurerm_network_security_group" "allow-ssh" {
   name                = "${var.prefix}-allow-ssh"
   location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.demo.name
+  resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
     name                       = "SSH"
